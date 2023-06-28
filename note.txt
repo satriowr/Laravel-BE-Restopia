@@ -1,0 +1,50 @@
+$data_product = DB::table('products')
+            ->join('categories as c', 'c.id', '=', 'products.id_category')
+            ->join('outlets as o', 'o.id', '=', 'c.id_outlet')
+            ->join('users as u', 'u.id', '=', 'o.id_user')
+            ->get();
+
+
+REGISTER gaatek
+
+
+Add table cart(
+    id_product{
+        name,
+        price
+    }
+    id_note_cart
+    quantity
+    type order
+    id_user
+    id_outlet
+)
+
+add table note_cart(
+    note
+)
+
+
+
+User
+Outlet
+Categories
+Products
+OrderStatus
+order
+OrderDetails
+note_cart
+cart
+
+status active user
+email belum fix
+backoffice belum fix
+ganti products di order detail jadi nama
+kasih paginate
+add id_category on outlet
+
+
+-------------------------------------------------------------------
+Detail laporan {
+    ditaruh di mata
+}
